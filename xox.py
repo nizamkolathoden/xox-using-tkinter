@@ -1,6 +1,10 @@
 from tkinter import *
 
+from tkinter import messagebox
+
 window = Tk()
+
+#window.withdraw()
 
 window.geometry("500x500")
 
@@ -33,13 +37,25 @@ def logic(buttons):
     btn_7["text"]=="O" and btn_8["text"]=="O" and btn_9["text"]=="O" or
     btn_1["text"]=="O" and btn_5["text"]=="O" and btn_9["text"]=="O" or
     btn_1["text"]=="O" and btn_7["text"]=="O" and btn_4["text"]=="O" or
-    btn_5["text"]=="O" and btn_2["text"]=="O" and btn_6["text"]=="O" or
+    btn_5["text"]=="O" and btn_2["text"]=="O" and btn_8["text"]=="O" or
     btn_9["text"]=="O" and btn_6["text"]=="O" and btn_3["text"]=="O" or 
     btn_3["text"]=="O" and btn_5["text"]=="O" and btn_7["text"]=="O"):
-         print("win O")
-    if (btn_1["text"]=="X" and btn_2["text"]=="X" and btn_3["text"]=="X" or btn_4["text"]=="X" and btn_5["text"]=="X" and btn_6["text"]=="X" or btn_7["text"]=="X" and btn_8["text"]=="X" and btn_9["text"]=="X" or btn_1["text"]=="X" and btn_5["text"]=="X" and btn_9["text"]=="X" or btn_1["text"]=="X" and btn_7["text"]=="X" and btn_4["text"]=="X" or btn_5["text"]=="X" and btn_2["text"]=="X" and btn_6["text"]=="X" or btn_9["text"]=="X" and btn_6["text"]=="X" and btn_3["text"]=="X" or btn_3["text"]=="X" and btn_5["text"]=="X" and btn_7["text"]=="X"):
-            print("winX")
-            END
+
+         messagebox.showinfo("Winner O", "Player 2 You Have Just Won The Game")
+
+    if (btn_1["text"]=="X" and btn_2["text"]=="X" and btn_3["text"]=="X" or 
+    btn_4["text"]=="X" and btn_5["text"]=="X" and btn_6["text"]=="X" or 
+    btn_7["text"]=="X" and btn_8["text"]=="X" and btn_9["text"]=="X" or 
+    btn_1["text"]=="X" and btn_5["text"]=="X" and btn_9["text"]=="X" or 
+    btn_1["text"]=="X" and btn_7["text"]=="X" and btn_4["text"]=="X" or 
+    btn_5["text"]=="X" and btn_2["text"]=="X" and btn_8["text"]=="X" or 
+    btn_9["text"]=="X" and btn_6["text"]=="X" and btn_3["text"]=="X" or 
+    btn_3["text"]=="X" and btn_5["text"]=="X" and btn_7["text"]=="X"):
+            
+        messagebox.showinfo("Winner X", "Player 1 You Have Just Won The Game")            
+
+       # return 0
+
 btn_1=Button(
     row_1,
     command=lambda:logic(btn_1)
@@ -78,8 +94,5 @@ btn_8.pack(side=LEFT,expand=True,fill="both")
 
 btn_9=Button(row_3,command=lambda:logic(btn_9))
 btn_9.pack(side=LEFT,expand=True,fill="both")
-
-
-
 
 window.mainloop()
