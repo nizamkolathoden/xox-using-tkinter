@@ -4,11 +4,15 @@ from tkinter import messagebox
 
 window = Tk()
 
-#window.withdraw()
+#window size
 
 window.geometry("500x500")
 
+#Title Of Game
+
 window.title("XOX")
+
+#Equely Dived Window 
 
 row_1 = Frame(window,bg="#fff",)
 row_1.pack(expand=True,fill="both")
@@ -23,6 +27,8 @@ def logic(buttons):
     
     global click
     
+    #cheaking
+
     if buttons["text"]=="" and click==True:
         buttons["text"]="X"
         click = False 
@@ -42,6 +48,8 @@ def logic(buttons):
     btn_3["text"]=="O" and btn_5["text"]=="O" and btn_7["text"]=="O"):
 
          messagebox.showinfo("Winner O", "Player 2 You Have Just Won The Game")
+         
+         exit()
 
     if (btn_1["text"]=="X" and btn_2["text"]=="X" and btn_3["text"]=="X" or 
     btn_4["text"]=="X" and btn_5["text"]=="X" and btn_6["text"]=="X" or 
@@ -54,7 +62,9 @@ def logic(buttons):
             
         messagebox.showinfo("Winner X", "Player 1 You Have Just Won The Game")            
 
-       # return 0
+        exit()
+
+#Button Designed
 
 btn_1=Button(
     row_1,
