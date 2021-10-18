@@ -143,7 +143,7 @@ window.mainloop()
 
 Open cmd then type
         
-        python Tick_Tack_Toe.py
+        python xox.py
 
 ### **Screenshot**
 
