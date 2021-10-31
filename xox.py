@@ -102,7 +102,8 @@ btn_7.pack(side=LEFT,expand=True,fill="both")
 btn_8=Button(row_3,command=lambda:logic(btn_8))
 btn_8.pack(side=LEFT,expand=True,fill="both")
 
+#btn_9=Button(row_3,command=lambda:logic(btn_9))
 btn_9=Button(row_3,command=lambda:logic(btn_9))
 btn_9.pack(side=LEFT,expand=True,fill="both")
-
+# set window in loop
 window.mainloop()
