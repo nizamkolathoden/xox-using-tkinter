@@ -1,4 +1,4 @@
-# **Tick Tack Toe**
+<h1 align=center >Tick Tack Toe</h1>
 
 we developed a Simpale **Tick Tack Toe** Desktop game
 
